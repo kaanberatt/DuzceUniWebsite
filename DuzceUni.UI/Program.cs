@@ -35,10 +35,7 @@ builder.Services.AddDistributedMemoryCache();
 builder.Services.AddWebEncoders(o => {
     o.TextEncoderSettings = new System.Text.Encodings.Web.TextEncoderSettings(UnicodeRanges.All);
 });
-builder.Services.AddControllersWithViews().AddFluentValidation(options =>
-{
-    options.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-});
+builder.Services.AddControllersWithViews();
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 var app = builder.Build();
