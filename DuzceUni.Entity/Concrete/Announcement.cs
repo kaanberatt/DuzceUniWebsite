@@ -14,6 +14,5 @@ namespace DuzceUni.Entity.Concrete
         public string AnnouncementImage { get; set; }
         public DateTime CreateDate {get; set;}
         public bool BlogStatus { get; set; }
-        public int AdminId { get; set; }
     }
 }

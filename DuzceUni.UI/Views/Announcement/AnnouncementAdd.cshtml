@@ -1,0 +1,50 @@
+﻿@using DuzceUni.Entity.Concrete
+@model Announcement
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="main-content-w3layouts-agileits">
+
+    <div class="container">
+            <h3>Duyuru Ekleme</h3>
+            <br />
+            <form asp-action="AnnouncementAdd" asp-controller="Announcement" enctype="multipart/form-data" method="post">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom01">Blog Başlık</label>
+                        <input type="text" asp-for="AnnouncementTitle" class="form-control" id="validationDefault01"
+                               placeholder="Başlığı Giriniz" required>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom02">Blog İçeriği</label>
+                        <textarea asp-for="AnnouncementContent" class="form-control" id="validationDefault02" cols="30" rows="10"
+                                  placeholder="Blog İçeriğini Giriniz" required></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom02">Blog Fotoğrafı</label>
+                        <input type="file" name="file" asp-for="AnnouncementImage" class="form-control" id="file" required>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label mb-1" for="switchOne">Durumu</label>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="switchOne" checked asp-for="BlogStatus">
+                            <label class="form-check-label" for="switchOne"></label>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" value="@DateTime.Now" asp-for="CreateDate" />
+
+                <button asp-action="AnnouncementAdd" asp-controller="Announcement" class="btn btn-info">Duyuru Ekle</button>
+            </form>
+
+    </div>
+</section>

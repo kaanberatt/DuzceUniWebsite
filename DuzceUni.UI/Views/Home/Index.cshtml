@@ -1,19 +1,21 @@
-﻿@{
+﻿@using DuzceUni.Entity.Concrete
+@model List<Announcement>
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <section class="main-content-w3layouts-agileits">
     <div class="container">
-        <h3 class="tittle">Bloglar</h3>
+        <h3 class="tittle">Duyurular</h3>
         <div class="inner-sec">
             <div class="left-blog-info-w3layouts-agileits text-left">
-                @*<div class="row">
+                <div class="row">
                     @{
                         foreach (var item in Model)
                         {
                             <div class="col-lg-4 card">
-                                <a asp-controller="Blog" asp-action="BlogReadAll" asp-route-id="@item.BlogId">
-                                    <img src="@item.BlogImage" class="card-img-top img-fluid" alt="">
+                                <a asp-controller="#" asp-action="#" asp-route-id="@item.Id">
+                                    <img src="~/file/Photos/@item.AnnouncementImage" class="card-img-top img-fluid" alt="">
                                 </a>
                                 <div class="card-body">
                                     <ul class="blog-icons my-4">
@@ -24,37 +26,37 @@
                                         </li>
                                         <li class="mx-2">
                                             <a href="#">
-                                                <i class="far fa-comment"></i> @item.CategoryId
+                                                <i class="far fa-comment"></i> bos
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <i class="fas fa-eye"></i>  @item.Category.CategoryName
+                                                <i class="fas fa-eye"></i>  bos
                                             </a>
                                         </li>
 
                                     </ul>
                                     <h5 class="card-title">
-                                        <a asp-controller="Blog" asp-action="BlogReadAll" asp-route-id="@item.BlogId">@item.BlogTitle</a>
+                                        <a asp-controller="Blog" asp-action="BlogReadAll" asp-route-id="@item.Id">@item.AnnouncementTitle</a>
                                     </h5>
 
                                     @{
-                                        if (item.BlogContent.Length > 130)
+                                        if (item.AnnouncementContent.Length > 130)
                                         {
-                                            <p class="card-text mb-3 text-justify">@item.BlogContent.Substring(0,item.BlogContent.Substring(0,130).LastIndexOf(" "))...</p>
+                                            <p class="card-text mb-3 text-justify">@item.AnnouncementContent.Substring(0,item.AnnouncementContent.Substring(0,130).LastIndexOf(" "))...</p>
                                         }
                                         else
                                         {
-                                            <p class="card-text mb-3 text-justify">@item.BlogContent.Substring(0,item.BlogContent.Length)</p>
+                                            <p class="card-text mb-3 text-justify">@item.AnnouncementContent.Substring(0,item.AnnouncementContent.Length)</p>
                                         }
                                     }
 
-                                    <a asp-controller="Blog" asp-action="BlogReadAll" asp-route-id="@item.BlogId" class="btn btn-primary read-m">Devamını Oku</a>
+                                    <a asp-controller="#" asp-action="#" asp-route-id="@item.Id" class="btn btn-primary read-m">Devamını Oku</a>
                                 </div>
                             </div>
                         }
                     }
-                </div>*@
+                </div>
             </div>
         </div>
     </div>

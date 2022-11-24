@@ -1,0 +1,52 @@
+﻿@using DuzceUni.Entity.Concrete
+@model Announcement
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="main-content-w3layouts-agileits">
+
+    <div class="container">
+        <h3>Duyuru Güncelleme<</h3>
+        <br />
+        <form asp-action="AnnouncementEdit" asp-controller="Announcement" enctype="multipart/form-data" method="post">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom01">Blog Başlık</label>
+                    <input type="text" asp-for="@Model.AnnouncementTitle" class="form-control" id="validationDefault01"
+                           placeholder="Başlığı Giriniz" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom02">Blog İçeriği</label>
+                    <textarea asp-for="@Model.AnnouncementContent" class="form-control" id="validationDefault02" cols="30" rows="10"
+                              placeholder="Blog İçeriğini Giriniz" required></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom02">Blog Fotoğrafı</label>
+                    <img src="~/file/Photos/@Model.AnnouncementImage" class="card-img-top img-fluid" alt="">
+                    <input type="file" name="file" class="form-control" id="file">
+                </div>
+            </div>
+            <br>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label mb-1" for="switchOne">Durumu</label>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="switchOne" asp-for="@Model.BlogStatus" >
+                        <label class="form-check-label" for="switchOne"></label>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" asp-for="@Model.AnnouncementImage"/>
+            <input type="hidden" asp-for="@Model.CreateDate"   />
+            <input type="hidden" asp-for="@Model.Id">
+            <button asp-action="AnnouncementEdit" asp-controller="Announcement" class="btn btn-info">Duyuru Güncelle</button>
+        </form>
+
+    </div>
+</section>

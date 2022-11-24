@@ -1,12 +1,17 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using DuzceUni.UI.Models;
+using DuzceUni.Business.Concrete;
+using DuzceUni.DataAccess.EntityFramework;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DuzceUni.UI.Controllers;
 
+[AllowAnonymous]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private AnnouncementManager announcementManager = new AnnouncementManager(new EFAnnouncementRepository());
 
     public HomeController(ILogger<HomeController> logger)
     {
@@ -15,7 +20,8 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        var values = announcementManager.TGetList().Where(x => x.BlogStatus == true).ToList();
+        return View(values);
     }
 
     public IActionResult Privacy()

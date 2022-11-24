@@ -1,6 +1,21 @@
+@{
+    var controller = ViewContext.RouteData.Values["Controller"].ToString().ToLower();
+}
+
 <div class="col-md-4 top-forms text-center mt-lg-3 mt-md-1 mt-0">
     <span class="mx-lg-4 mx-md-2  mx-1">
-        <a asp-controller="Account" asp-action="Login">
-            <i class="fas fa-lock"></i>Giriş Yap</a>
+        
+            
+            @if (controller != "announcement")
+            {
+            <a asp-controller="Account" asp-action="Login">
+                <i class="fas fa-lock"></i>
+                Giriş Yap
+            </a>
+            }
+            else
+            {
+                <p>Admin Girişi Başarılı</p>
+            }
     </span>
 </div>

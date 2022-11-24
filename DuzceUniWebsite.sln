@@ -3,23 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuzceUni.Entity", "DuzceUni.Entity\DuzceUni.Entity.csproj", "{53EA3D04-23D2-4D69-BFA3-C1B9496D15D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DuzceUni.Entity", "DuzceUni.Entity\DuzceUni.Entity.csproj", "{53EA3D04-23D2-4D69-BFA3-C1B9496D15D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuzceUni.DataAccess", "DuzceUni.DataAccess\DuzceUni.DataAccess.csproj", "{E48FEC9C-4865-4061-AE4D-75F67961BE9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DuzceUni.DataAccess", "DuzceUni.DataAccess\DuzceUni.DataAccess.csproj", "{E48FEC9C-4865-4061-AE4D-75F67961BE9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuzceUni.Business", "DuzceUni.Business\DuzceUni.Business.csproj", "{4C414FA1-8A9A-4332-8080-6878EBB9626A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DuzceUni.Business", "DuzceUni.Business\DuzceUni.Business.csproj", "{4C414FA1-8A9A-4332-8080-6878EBB9626A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuzceUni.UI", "DuzceUni.UI\DuzceUni.UI.csproj", "{C9E976E9-26CC-421F-ACD0-D610C56623EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DuzceUni.UI", "DuzceUni.UI\DuzceUni.UI.csproj", "{C9E976E9-26CC-421F-ACD0-D610C56623EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuzceUni.Core", "DuzceUni.Core\DuzceUni.Core.csproj", "{F78450B2-660B-4466-A448-20F4E16FF099}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DuzceUni.Core", "DuzceUni.Core\DuzceUni.Core.csproj", "{F78450B2-660B-4466-A448-20F4E16FF099}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{53EA3D04-23D2-4D69-BFA3-C1B9496D15D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +39,11 @@ Global
 		{F78450B2-660B-4466-A448-20F4E16FF099}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F78450B2-660B-4466-A448-20F4E16FF099}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F78450B2-660B-4466-A448-20F4E16FF099}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6BC8799-247D-4700-A89F-32B673880704}
 	EndGlobalSection
 EndGlobal
